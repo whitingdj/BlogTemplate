@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="Blog">
+    <head>
+        <!-- angulare 1.5 and angulare-route -->
+        <script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+        <script data-require="angular-route@*" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+        <!-- font awesome because its awesome and everybody should use it -->
+        <script src="https://use.fontawesome.com/937fa50252.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+        <titl>Blog</title>
+    </head>
+    
+    <body>
+        <!-- tags to make the header to here -->
+
+        <div ng-view></div> <!-- this tag represents the view that will be loaded by angular -->
+
+        <!-- tags to make the footer go here -->
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'google-analytics-account-id-here', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- insert links to javascript here -->
+        <script src="javascript/modules/routing.js"></scipt>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+(function() {
+    var blogger = angular.module("Blog", ["ngRoute"]);
+    
+    blogger.config(function ($routeProvider) {
+        $routeProvider
+            .when("/", {
+                templateUrl: "views/home.html",
+                controller: "BlogController"
+            })
+            .when("/post/:numeral", {
+                templateUrl: "views/post.html",
+                controller: "BlogController"
+            })
+            .otherwise({
+                redirectTo: "/"
+            })
+    });
+})();
