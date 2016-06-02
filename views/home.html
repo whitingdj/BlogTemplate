@@ -1,0 +1,6 @@
+<h2>Feed</h2>
+<div ng-repeat="post in blogPosts | limit 5">
+    <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
+    <p>{{ post.Teaser }}</p>
+    <a href="#/posts/{{ post.Id }}">Read More</a>    
+</div>
