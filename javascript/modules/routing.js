@@ -11,6 +11,9 @@
                 templateUrl: "views/post.html",
                 controller: "BlogController"
             })
+            .when("/about", {
+                templateUrl: "views/about.html"
+            })
             .otherwise({
                 redirectTo: "/"
             })
