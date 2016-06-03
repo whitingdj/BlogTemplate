@@ -1,6 +1,15 @@
-<h2>Feed</h2>
-<div ng-repeat="post in blogPosts | limit 5">
-    <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
-    <p>{{ post.Teaser }}</p>
-    <a href="#/posts/{{ post.Id }}">Read More</a>    
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-preview" ng-repeat="post in blogPosts | limit 5">
+                <a href="#/post/{{ post.Id }}">
+                    <h2 class="post-title">{{ post.Title }}</h2>
+                    <h3 class="post-subtitle"> {{ post.Teaser }}</h3>
+                    <!-- discuss how to do the image here -->
+                </a>
+                <p class="post-meta">Posted by <a href="#">{{ post.Author }}</a> on {{ post.PostDate }}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
 </div>
