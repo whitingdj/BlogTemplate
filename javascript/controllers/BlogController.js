@@ -1,7 +1,7 @@
 (function() {
     var blogger = angular.module("Blog");
     
-    var BlogController = function($scope, $routeParams, blogPostDataService) {
+    var BlogController = function($scope, $routeParams, $sce, blogPostDataService) {
         
         $scope.post = null;
         $scope.blogPosts = null;
@@ -13,6 +13,7 @@
                 for (var p in $scope.blogPosts) {
                     if ($scope.blogPosts[p].Id == $routeParams.id) {
                         $scope.post = $scope.blogPosts[p];
+                        $scope.post.Content = $sce.trustAsHtml($scope.post.Content);
                     }
                 };
                 $scope.PreviousId = $scope.post.Id > 1 ? $scope.post.Id - 1 : 1;
@@ -29,5 +30,5 @@
             
     };
     
-    blogger.controller("BlogController", ["$scope", "$routeParams", "blogPostDataService", BlogController]);
+    blogger.controller("BlogController", ["$scope", "$routeParams", "$sce", "blogPostDataService", BlogController]);
 })();
