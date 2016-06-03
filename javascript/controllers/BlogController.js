@@ -1,7 +1,7 @@
 (function() {
     var blogger = angular.module("Blog");
     
-    var BlogController = function($scope, $routeParams, $sce, blogPostDataService) {
+    var BlogController = function($scope, $routeParams, $sce, blogPostDataService, blogSearchService) {
         
         $scope.post = null;
         $scope.blogPosts = null;
@@ -30,5 +30,5 @@
             
     };
     
-    blogger.controller("BlogController", ["$scope", "$routeParams", "$sce", "blogPostDataService", BlogController]);
+    blogger.controller("BlogController", ["$scope", "$routeParams", "$sce", "blogPostDataService", "blogSearchService", BlogController]);
 })();
