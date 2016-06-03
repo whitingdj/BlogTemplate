@@ -7,7 +7,7 @@
                 templateUrl: "views/home.html",
                 controller: "BlogController"
             })
-            .when("/post/:numeral", {
+            .when("/post/:id", {
                 templateUrl: "views/post.html",
                 controller: "BlogController"
             })
