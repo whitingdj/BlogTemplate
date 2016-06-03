@@ -14,6 +14,10 @@
             .when("/about", {
                 templateUrl: "views/about.html"
             })
+            .when("/all", {
+                templateUrl: "views/allPosts.html",
+                controller: "BlogController"
+            })
             .otherwise({
                 redirectTo: "/"
             })
