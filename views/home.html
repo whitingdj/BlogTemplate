@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-preview" ng-repeat="post in blogPosts | limit 5">
+            <div class="post-preview" ng-repeat="post in blogPosts | limitTo: 5">
                 <a href="#/post/{{ post.Id }}">
                     <h2 class="post-title">{{ post.Title }}</h2>
                     <h3 class="post-subtitle"> {{ post.Teaser }}</h3>

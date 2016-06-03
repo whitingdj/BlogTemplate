@@ -15,7 +15,7 @@
         };
         
         blogPostDataService.getAllPosts()
-            .then(onGetPostsSuccess, onGetPostsFailure);
+            .then(onGetPostSuccess, onGetPostFailure);
         
         if( $routeParams.id) {
             for (var p in $scope.blogPosts) {
