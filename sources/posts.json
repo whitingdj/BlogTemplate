@@ -1,5 +1,6 @@
 [
     {
+        "Id": 1,
         "Title": "Sample Title 2",
         "PostDate": "June 2nd 2016",
         "Teaser": "Sample Teaser",
@@ -7,6 +8,7 @@
         "Author": "Author Name"
     },
     {
+        "Id": 2,
         "Title": "Sample Title 2",
         "PostDate": "June 2nd 2016",
         "Teaser": "Sample Teaser 2",
@@ -14,6 +16,7 @@
         "Author": "Author Name"
     },
     {
+        "Id": 3,
         "Title": "Sample Title 3",
         "PostDate": "June 2nd 2016",
         "Teaser": "Sample Teaser 3",
