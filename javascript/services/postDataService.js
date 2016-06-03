@@ -2,7 +2,7 @@
     var blogPostDataService = function ($http) {
 
         var getAllPosts = function () {
-            return $http.get("/sources/posts.json")
+            return $http.get("sources/posts.json")
                 .then(function (response) {
                     return response.data;
                 });
