@@ -16,8 +16,8 @@
                         $scope.post.Content = $sce.trustAsHtml($scope.post.Content);
                     }
                 };
-                $scope.PreviousId = $scope.post.Id > 1 ? $scope.post.Id - 1 : 1;
-                $scope.NextId = $scope.blogPosts.length < $scope.post.Id ? $scope.post.Id + 1 : $scope.post.Id;
+                $scope.previous = $scope.post.Id - 1 > 0 ? $scope.post.Id - 1 : null;
+                $scope.next = $scope.post.Id + 1 <= $scope.blogPosts.length ? $scope.post.Id + 1 : null;
             }
         };
         
