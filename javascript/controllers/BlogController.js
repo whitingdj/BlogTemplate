@@ -17,7 +17,7 @@
                     }
                 };
                 $scope.PreviousId = $scope.post.Id > 1 ? $scope.post.Id - 1 : 1;
-                $scope.NextId = $scope.blogPosts.length < $scope.post.Id ? scope.post.Id + 1 : scope.post.Id;
+                $scope.NextId = $scope.blogPosts.length < $scope.post.Id ? $scope.post.Id + 1 : $scope.post.Id;
             }
         };
         
