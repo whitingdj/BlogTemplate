@@ -1,6 +1,6 @@
 <div ng-model="post">
     <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
     <p>{{ post.Content }}</p>  
-    <a href="#/post/{{ post.PreviousId }}" ng-show="post.Previous">Previous</a>
-    <a href="#/post/{{ post.NextId }}" ng-show="post.Next">Next</a>
+    <a href="#/post/{{ post.PreviousId }}" ng-show="post.PreviousId">Previous</a>
+    <a href="#/post/{{ post.NextId }}" ng-show="post.NextId">Next</a>
 </div>
