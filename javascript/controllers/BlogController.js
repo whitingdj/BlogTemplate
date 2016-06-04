@@ -6,6 +6,7 @@
         $scope.post = null;
         $scope.blogPosts = null;
         $scope.postId = $routeParams.id;
+        $scope.searchType = 'meta';
         
         var onGetPostSuccess = function(data) {
             $scope.blogPosts = data;
