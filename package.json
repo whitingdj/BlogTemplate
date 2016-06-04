@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "routing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikesnorth/BlogTemplate.git"
+  },
+  "author": "Mike North",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikesnorth/BlogTemplate/issues"
+  },
+  "homepage": "https://github.com/Mikesnorth/BlogTemplate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-open": "^2.0.0"
+  }
+}
