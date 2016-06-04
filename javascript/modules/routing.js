@@ -14,6 +14,15 @@
             .when("/about", {
                 templateUrl: "views/about.html"
             })
+            .when("/reviews", {
+                templateUrl: "views/reviews.html"
+            })
+            .when("/workouts", {
+                templateUrl: "views/workouts.html"
+            })
+            .when("/contact", {
+                templateUrl: "views/contact.html"
+            })
             .when("/all", {
                 templateUrl: "views/allPosts.html",
                 controller: "BlogController"
