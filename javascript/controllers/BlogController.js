@@ -35,6 +35,16 @@
             }
         }
         
+        $scope.performFullSearch = function() {
+            $scope.searchError = null;
+            var results = blogSearchService.contentSearch($scope.searchCriteria, $scope.blogPosts);
+            if (results.length > 0) {
+                $scope.metaSearchResults = results;
+            } else {
+                $scope.searchError = "no results";
+            }
+        }
+        
         blogPostDataService.getAllPosts()
             .then(onGetPostSuccess, onGetPostFailure);
             
