@@ -4,7 +4,10 @@
             <div>
                 <input type="text" maxlength="50" ng-model="searchCriteria" />
                 <button value="search" ng-click="performMetaSearch()">Click Me!</button>
-                <div class="results">{{ metaSearchResults }}</div>
+                <div class="search-results" ng-repeat="result in metaSearchResults">
+                    <a ng-href="/#/post/{{ result.Id }}">{{ result.Teaser }}</a>
+                </div>
+                <div ng-show="searchError != null">{{ searchError }}</p>
             </div>
             <div class="post-preview" ng-repeat="post in blogPosts">
                 <a href="#/post/{{ post.Id }}">

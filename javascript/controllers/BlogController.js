@@ -26,8 +26,9 @@
         };
         
         $scope.performMetaSearch = function() {
+            $scope.searchError = null;
             var results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
-            if (results) {
+            if (results.length > 0) {
                 $scope.metaSearchResults = results;
             } else {
                 $scope.searchError = "no results";
