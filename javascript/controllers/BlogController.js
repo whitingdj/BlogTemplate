@@ -25,8 +25,8 @@
             $scope.error = "Failed to load blog post data: " + reason;
         };
         
-        var performMetaSearch = function(criteria) {
-            var results = blogSearchService.metaSearch(criteria, $scope.blogPosts);
+        $scope.performMetaSearch = function() {
+            var results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
             if (results) {
                 $scope.metaSearchResults = results;
             } else {

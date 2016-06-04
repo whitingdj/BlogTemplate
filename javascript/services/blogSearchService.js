@@ -4,10 +4,12 @@
         var metaSearch = function(criteria, postData) {
             // TODO refactor, as this is probably the slowest possible way to perform this search
             var results = [];
-            for(var term in criteria.toLowerCase().split(" ")) {
+            var searchCriteria = criteria.toLowerCase().split(" ");
+            for(var term in searchCriteria) {
                 for(var post in postData) {
-                    if(post.Keywords.toLowerCase().search(term) > -1 && !results.includes(post)) {
-                        results.push(post);
+                    if(postData[post].Keywords.toLowerCase().search(searchCriteria[term]) > -1 
+                    && !results.includes(postData[post])) {
+                        results.push(postData[post]);
                     }
                 }
             };
