@@ -16,7 +16,7 @@
             return results;
         };
 
-        var contentSearch = function(criteria, postData) {
+        var fullSearch = function(criteria, postData) {
             // TODO refactor, as this is probably the slowest possible way to perform this search
             var results = [];
             var searchCriteria = criteria.toLowerCase().split(" ");
@@ -37,7 +37,7 @@
 
         return {
             metaSearch: metaSearch,
-            contentSearch: contentSearch
+            fullSearch: fullSearch
         };
 
     };

@@ -3,7 +3,11 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div>
                 <input type="text" maxlength="50" ng-model="searchCriteria" />
-                <button value="search" ng-click="performFullSearch()">Click Me!</button>
+                <select ng-model="searchType">
+                    <option value="meta">quick search</option>
+                    <option value="full">full search</option>
+                </select>
+                <button ng-click="search(searchType)">Search</button>
                 <div class="search-results" ng-repeat="result in searchResults">
                     <a ng-href="/#/post/{{ result.Id }}">{{ result.Teaser }}</a>
                 </div>

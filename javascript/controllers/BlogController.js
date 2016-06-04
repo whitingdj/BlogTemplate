@@ -25,26 +25,21 @@
             $scope.error = "Failed to load blog post data: " + reason;
         };
         
-        $scope.performMetaSearch = function() {
+        $scope.search = function(type) {
             $scope.searchError = null;
+            var results = null;
             
             if(!$scope.searchCriteria) return;
             
-            var results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
-            if (results.length > 0) {
-                $scope.searchResults = results;
+            if(type == 'meta') {
+                results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
+            } else if (type == 'full') {
+                results = blogSearchService.fullSearch($scope.searchCriteria, $scope.blogPosts);
             } else {
-                $scope.searchResults = null;
-                $scope.searchError = "no results";
+                $scope.searchError = "search type not found, available search types are meta and full";
+                return;
             }
-        }
-        
-        $scope.performFullSearch = function() {
-            $scope.searchError = null;
             
-            if(!$scope.searchCriteria) return;
-            
-            var results = blogSearchService.contentSearch($scope.searchCriteria, $scope.blogPosts);
             if (results.length > 0) {
                 $scope.searchResults = results;
             } else {
