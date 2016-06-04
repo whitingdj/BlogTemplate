@@ -27,20 +27,28 @@
         
         $scope.performMetaSearch = function() {
             $scope.searchError = null;
+            
+            if(!$scope.searchCriteria) return;
+            
             var results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
             if (results.length > 0) {
-                $scope.metaSearchResults = results;
+                $scope.searchResults = results;
             } else {
+                $scope.searchResults = null;
                 $scope.searchError = "no results";
             }
         }
         
         $scope.performFullSearch = function() {
             $scope.searchError = null;
+            
+            if(!$scope.searchCriteria) return;
+            
             var results = blogSearchService.contentSearch($scope.searchCriteria, $scope.blogPosts);
             if (results.length > 0) {
-                $scope.metaSearchResults = results;
+                $scope.searchResults = results;
             } else {
+                $scope.searchResults = null;
                 $scope.searchError = "no results";
             }
         }

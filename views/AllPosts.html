@@ -4,7 +4,7 @@
             <div>
                 <input type="text" maxlength="50" ng-model="searchCriteria" />
                 <button value="search" ng-click="performFullSearch()">Click Me!</button>
-                <div class="search-results" ng-repeat="result in metaSearchResults">
+                <div class="search-results" ng-repeat="result in searchResults">
                     <a ng-href="/#/post/{{ result.Id }}">{{ result.Teaser }}</a>
                 </div>
                 <div ng-show="searchError != null">{{ searchError }}</p>
