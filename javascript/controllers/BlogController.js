@@ -6,6 +6,7 @@
         $scope.post = null;
         $scope.blogPosts = null;
         $scope.postId = $routeParams.id;
+        $scope.searchType = 'meta';
         
         var onGetPostSuccess = function(data) {
             $scope.blogPosts = data;
@@ -25,11 +26,25 @@
             $scope.error = "Failed to load blog post data: " + reason;
         };
         
-        var performMetaSearch = function(criteria) {
-            var results = blogSearchService.metaSearch(criteria, $scope.blogPosts);
-            if (results) {
-                $scope.metaSearchResults = results;
+        $scope.search = function(type) {
+            $scope.searchError = null;
+            var results = null;
+            
+            if(!$scope.searchCriteria) return;
+            
+            if(type == 'meta') {
+                results = blogSearchService.metaSearch($scope.searchCriteria, $scope.blogPosts);
+            } else if (type == 'full') {
+                results = blogSearchService.fullSearch($scope.searchCriteria, $scope.blogPosts);
             } else {
+                $scope.searchError = "search type not found, available search types are meta and full";
+                return;
+            }
+            
+            if (results.length > 0) {
+                $scope.searchResults = results;
+            } else {
+                $scope.searchResults = null;
                 $scope.searchError = "no results";
             }
         }

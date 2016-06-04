@@ -4,23 +4,40 @@
         var metaSearch = function(criteria, postData) {
             // TODO refactor, as this is probably the slowest possible way to perform this search
             var results = [];
-            for(var term in criteria.toLowerCase().split(" ")) {
+            var searchCriteria = criteria.toLowerCase().split(" ");
+            for(var term in searchCriteria) {
                 for(var post in postData) {
-                    if(post.Keywords.toLowerCase().search(term) > -1 && !results.includes(post)) {
-                        results.push(post);
+                    if(postData[post].Keywords.toLowerCase().search(searchCriteria[term]) > -1 
+                    && !results.includes(postData[post])) {
+                        results.push(postData[post]);
                     }
                 }
             };
             return results;
         };
 
-        var contentSearch = function(criteria, postData) {
-            // TODO implement content search
+        var fullSearch = function(criteria, postData) {
+            // TODO refactor, as this is probably the slowest possible way to perform this search
+            var results = [];
+            var searchCriteria = criteria.toLowerCase().split(" ");
+            for(var term in searchCriteria) {
+                for(var post in postData) {
+                    if((postData[post].Content.toLowerCase().search(searchCriteria[term]) > -1 
+                            || postData[post].Title.toLowerCase().search(searchCriteria[term]) > -1
+                            || postData[post].Teaser.toLowerCase().search(searchCriteria[term]) > -1
+                            || postData[post].Keywords.toLowerCase().search(searchCriteria[term]) > -1)
+                        && !results.includes(postData[post])) {
+                            
+                        results.push(postData[post]);
+                    }
+                }
+            };
+            return results;
         };
 
         return {
             metaSearch: metaSearch,
-            contentSearch: contentSearch
+            fullSearch: fullSearch
         };
 
     };
