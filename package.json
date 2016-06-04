@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Mikesnorth/BlogTemplate/issues"
   },
-  "homepage": "https://github.com/Mikesnorth/BlogTemplate#readme"
+  "homepage": "https://github.com/Mikesnorth/BlogTemplate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-open": "^2.0.0"
+  }
 }
