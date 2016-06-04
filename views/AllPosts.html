@@ -3,7 +3,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div>
                 <input type="text" maxlength="50" ng-model="searchCriteria" />
-                <button value="search" ng-click="performMetaSearch()">Click Me!</button>
+                <button value="search" ng-click="performFullSearch()">Click Me!</button>
                 <div class="search-results" ng-repeat="result in metaSearchResults">
                     <a ng-href="/#/post/{{ result.Id }}">{{ result.Teaser }}</a>
                 </div>
