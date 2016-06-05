@@ -33,7 +33,7 @@
             <div class="post-preview" ng-repeat="post in blogPosts">
                 <a href="#/post/{{ post.Id }}">
                     <h2 class="post-title">{{ post.Title }}</h2>
-                    <h3 class="post-subtitle"> {{ post.Content }}</h3>
+                    <div ng-bind-html="post.Content"></div>
                 </a>
                 <p class="post-meta">Posted by <a href="#">{{ post.Author }}</a> on {{ post.PostDate }}</p>
                 <hr>

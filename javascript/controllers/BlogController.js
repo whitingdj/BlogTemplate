@@ -10,15 +10,15 @@
         
         var onGetPostSuccess = function(data) {
             $scope.blogPosts = data;
-            if ($routeParams.id) {
-                for (var p in $scope.blogPosts) {
+            for (var p in $scope.blogPosts) {
+                $scope.blogPosts[p].Content = $sce.trustAsHtml($scope.blogPosts[p].Content);
+                if ($routeParams.id) {      
                     if ($scope.blogPosts[p].Id == $routeParams.id) {
                         $scope.post = $scope.blogPosts[p];
-                        $scope.post.Content = $sce.trustAsHtml($scope.post.Content);
+                        $scope.previous = $scope.post.Id - 1 > 0 ? $scope.post.Id - 1 : null;
+                        $scope.next = $scope.post.Id + 1 <= $scope.blogPosts.length ? $scope.post.Id + 1 : null;
                     }
-                };
-                $scope.previous = $scope.post.Id - 1 > 0 ? $scope.post.Id - 1 : null;
-                $scope.next = $scope.post.Id + 1 <= $scope.blogPosts.length ? $scope.post.Id + 1 : null;
+                }
             }
         };
         
