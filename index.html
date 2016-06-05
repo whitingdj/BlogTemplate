@@ -7,7 +7,7 @@
         <!-- font awesome because its awesome and everybody should use it -->
         <script src="https://use.fontawesome.com/937fa50252.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-        <title>Postpartum Kicks</title>
+        <title ng-bind="pageTitle"></title>
         <!-- insert custom head tags here -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/clean-blog.css" rel="stylesheet">
@@ -53,7 +53,24 @@
             </div>
             <!-- /.container -->
         </nav>
+<<<<<<< HEAD
 
+=======
+        <header class="intro-header" style="background-image: url('{{ pageBackground }}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>Postpartum Kicks</h1>
+                            <hr class="small">
+                            <span class="subheading">Your Guide to getting back into shape and eating healthy, when there's
+                            no time!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+>>>>>>> e1d3c6e187178d44784401df50c18a6b2e2832d6
 
         <div ng-view></div> <!-- this tag represents the view that will be loaded by angular -->
 
