@@ -22,13 +22,22 @@
                 controller: "BlogController"
             })
             .when("/reviews", {
-                templateUrl: "views/reviews.html"
+                title: "Reviews",
+                templateUrl: "views/reviews.html",
+                image: "img/review-bg.jpg",
+                controller: "BlogController"
             })
             .when("/workouts", {
-                templateUrl: "views/workouts.html"
+                title: "Workouts",
+                templateUrl: "views/workouts.html",
+                image: "img/workout-bg.jpg",
+                controller: "BlogController"
             })
             .when("/contact", {
-                templateUrl: "views/contact.html"
+                title: "Contact",
+                templateUrl: "views/contact.html",
+                image: "img/contact-bg.jpg",
+                controller: "BlogController"
             })
             .when("/all", {
                 title: "All Posts",
