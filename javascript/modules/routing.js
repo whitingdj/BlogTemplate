@@ -4,17 +4,26 @@
     blogger.config(function ($routeProvider) {
         $routeProvider
             .when("/", {
+                title: "Home",
+                image: "img/home-bg.jpg",
                 templateUrl: "views/home.html",
                 controller: "BlogController"
             })
             .when("/post/:id", {
+                title: "Post",
+                image: "img/post-bg.jpg",
                 templateUrl: "views/post.html",
                 controller: "BlogController"
             })
             .when("/about", {
-                templateUrl: "views/about.html"
+                title: "About",
+                image: "img/about-bg.jpg",
+                templateUrl: "views/about.html",
+                controller: "BlogController"
             })
             .when("/all", {
+                title: "All Posts",
+                image: "img/all-bg.jpg",
                 templateUrl: "views/allPosts.html",
                 controller: "BlogController"
             })

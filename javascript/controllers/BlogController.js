@@ -1,8 +1,13 @@
 (function() {
     var blogger = angular.module("Blog");
     
-    var BlogController = function($scope, $routeParams, $sce, blogPostDataService, blogSearchService) {
+    var BlogController = function($scope, $rootScope, $routeParams, $sce, blogPostDataService, blogSearchService) {
         
+        $scope.$on('$routeChangeSuccess', function(event, current, previous) {
+            $rootScope.pageTitle = current.$$route.title;
+            $rootScope.pageBackground = current.$$route.image;
+        });
+
         $scope.post = null;
         $scope.blogPosts = null;
         $scope.postId = $routeParams.id;
@@ -54,5 +59,5 @@
             
     };
     
-    blogger.controller("BlogController", ["$scope", "$routeParams", "$sce", "blogPostDataService", "blogSearchService", BlogController]);
+    blogger.controller("BlogController", ["$scope", "$rootScope", "$routeParams", "$sce", "blogPostDataService", "blogSearchService", BlogController]);
 })();

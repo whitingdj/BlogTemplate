@@ -1,6 +1,8 @@
-<div ng-model="post">
-    <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
-    <div ng-bind-html="post.Content"></div>
-    <a ng-href="#/post/{{ previous }}" ng-show="previous">Previous</a>
-    <a ng-href="#/post/{{ next }}" ng-show="next">Next</a>
+<div class="container">
+    <div ng-model="post">
+        <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
+        <div ng-bind-html="post.Content"></div>
+        <a ng-href="#/post/{{ previous }}" ng-show="previous">Previous</a>
+        <a ng-href="#/post/{{ next }}" ng-show="next">Next</a>
+    </div>
 </div>
