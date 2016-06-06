@@ -1,18 +1,3 @@
-
-<div class="container">
-<div ng-model="post">
-    <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
-<<<<<<< Updated upstream
-    <div ng-bind-html="post.Content"></div>
-    <a ng-href="#/post/{{ previous }}" ng-show="previous">Previous</a>
-    <a ng-href="#/post/{{ next }}" ng-show="next">Next</a>
-=======
-    <div ng-bind-html="post.Content"></div>  
-    <a ng-href="#/post/{{post.PreviousId}}" ng-hide="post.PreviousId = null">Previous</a>
-    <a ng-href="#/post/{{post.NextId}}" ng-hide="post.NextId = null">Next</a>
-</div>
->>>>>>> Stashed changes
-=======
 <div class="container">
     <div ng-model="post">
         <h3>{{ post.Title }} : {{ post.PostDate }}</h3>
@@ -20,5 +5,4 @@
         <a ng-href="#/post/{{ previous }}" ng-show="previous">Previous</a>
         <a ng-href="#/post/{{ next }}" ng-show="next">Next</a>
     </div>
->>>>>>> e1d3c6e187178d44784401df50c18a6b2e2832d6
 </div>
