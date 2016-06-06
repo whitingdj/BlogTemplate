@@ -24,7 +24,7 @@
                     <option value="meta">quick search</option>
                     <option value="full">full search</option>
                 </select>
-                <button ng-click="search(searchType)">Search</button>
+                <button ng-click="search(searchType)" class="btn btn-default">Search</button>
                 <div class="search-results" ng-repeat="result in searchResults">
                     <a ng-href="/#/post/{{ result.Id }}">{{ result.Teaser }}</a>
                 </div>

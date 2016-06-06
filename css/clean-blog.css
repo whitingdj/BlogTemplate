@@ -17,7 +17,7 @@ p {
   margin: 30px 0;
 }
 p a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 h1{
   font-family: 'Montez', cursive;
@@ -85,7 +85,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: #000;
+    color: #00BCD4;
   }
   .navbar-custom .nav li a {
     color: #E91E63;
@@ -93,7 +93,7 @@ hr.small {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: #000;
+    color: #00BCD4;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -252,7 +252,7 @@ hr.small {
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
   color: #0085a1;
-  text-decoration: underline;
+  text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {

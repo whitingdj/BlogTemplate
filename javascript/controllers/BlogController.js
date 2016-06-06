@@ -6,6 +6,7 @@
         $scope.$on('$routeChangeSuccess', function(event, current, previous) {
             $rootScope.pageTitle = current.$$route.title;
             $rootScope.pageBackground = current.$$route.image;
+            $rootScope.pageSubtitle = current.$$route.subtitle;
         });
 
         $scope.post = null;
